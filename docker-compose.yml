@@ -1,11 +1,11 @@
 version: "3"
 services:
   client:
-    image: "morganpsell/multi-client"
+    image: "morganpsell/multi-client-10-14"
     mem_limit: 128m
     hostname: client
   server:
-    image: "morganpsell/multi-server"
+    image: "morganpsell/multi-server-10-14"
     mem_limit: 128m
     hostname: api
     environment:
@@ -17,14 +17,14 @@ services:
       - PGPASSWORD=$PGPASSWORD
       - PGPORT=$PGPORT
   worker:
-    image: "morganpsell/multi-worker"
+    image: "morganpsell/multi-worker-10-14"
     mem_limit: 128m
     hostname: worker
     environment:
       - REDIS_HOST=$REDIS_HOST
       - REDIS_PORT=$REDIS_PORT
   nginx:
-    image: "morganpsell/multi-nginx"
+    image: "morganpsell/multi-nginx-10-14"
     mem_limit: 128m
     hostname: nginx
     ports:
