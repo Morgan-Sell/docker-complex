@@ -18,7 +18,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Leave the port!!!
+            Fib Caclulator Deployed!
           </a>
           <Link to="/">Home</Link>
           <Link to="/otherpage">Other Page</Link>
